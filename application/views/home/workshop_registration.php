@@ -10,28 +10,9 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrapValidator.min.css'); ?>">
   </head>
   <body>
-    <?php echo $header; ?>
+    <?php //echo $header; ?>
     <!--====== PAGE BANNER PART START ======-->
 
-    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(img/page-banner-6.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-banner-cont">
-                        <h2>Registration</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item"><a href="seminars.php">Seminar</a></li>
-                                <li class="breadcrumb-item"><a href="seminars-single.php">Campus clean workshop</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Registration</li>
-                            </ol>
-                        </nav>
-                    </div>  <!-- page banner cont -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
 
     <!--====== PAGE BANNER PART ENDS ======-->
 
@@ -39,6 +20,13 @@
 
     <section id="contact-page" class="pt-90 pb-120 gray-bg">
         <div class="container">
+            <div class="row ">
+            <div class="col-md-12 text-center ">
+			 <img src="<?php echo base_url('assets/img/logo.png'); ?>" alt="PSAAKET" class="img-responsive" width="180px">
+				<div class="clearfix">&nbsp;</div>
+				<h3 class="text-center" style="color:#192f5d"> Workshop Registration Form</h3>
+			</div>
+			</div>
             <div class="row">
                 <div class="col-lg-6 mx-auto">
                     <div class="contact-from mt-30">
@@ -115,7 +103,7 @@
 
     <!--====== CONTACT PART ENDS ======-->
     <?php echo $scripts; ?>
-    <?php echo $footer; ?>
+    <?php //echo $footer; ?>
     <script src="<?php echo base_url('assets/js/bootstrapValidator.min.js'); ?>"></script>
     <script type="text/javascript">
       $(document).ready(function(){
