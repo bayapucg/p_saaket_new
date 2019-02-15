@@ -23,52 +23,50 @@
     <thead>
       <tr class="text-center">
         <th colspan="2">Confirm Details</th>
-        
+
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Name</td>
-        <td>Bayapu</td>
+        <td><?php echo $user_data['name'];?></td>
       </tr>
 	  <tr>
-        <td>Name</td>
-        <td>Bayapu</td>
+        <td>Email</td>
+      <td><?php echo $user_data['email'];?></td>
       </tr>
 	  <tr>
-        <td>Name</td>
-        <td>Bayapu</td>
+        <td>Phone Number</td>
+      <td><?php echo $user_data['phone'];?></td>
       </tr>
 	  <tr>
-        <td>Name</td>
-        <td>Bayapu</td>
+        <td>Roll Number</td>
+          <td><?php echo $user_data['roll_number'];?></td>
       </tr>
 	  <tr>
-        <td>Name</td>
-        <td>Bayapu</td>
+        <td>College Name</td>
+      <td><?php echo $user_data['college_name'];?></td>
       </tr>
-	  <tr>
-        <td>Name</td>
-        <td>Bayapu</td>
-      </tr>
-      
+
+
     </tbody>
   </table>
-                    <div id="online_amt_1" style="padding-left:50px;">
+                    <!-- <div id="online_amt_1" style="padding-left:50px;">
                       <form action="<?php echo base_url('seminars/success'); ?>" method="post" onSubmit="return checkvalidation_payment(this.form);">
-                       <!-- <input type="radio" id="radio1"  name="payment" onclick="payment_type(this.value);" value="2"><span > Cash On Delivery</span>
+                       <input type="radio" id="radio1"  name="payment" onclick="payment_type(this.value);" value="2"><span > Cash On Delivery</span>
                         <br>
                         <br>
                         <input type="radio" id="radio2" name="payment" onclick="payment_type(this.value);"  value="3"><span > Swipe on Delivery</span>
-                        <br>-->
                         <br>
-                        <input type="radio" id="radio3" name="payment" onclick="payment_type(this.value);" value="1"><span> Online Payment</span>
+                        <br>
+                        <input type="text" id="radio3" name="payment"  hidden value="1">
+                        <span> Online Payment</span>
                         <br>
                         <br>
                         <button type="submit" class="btn btn-success" name="pay_submit">Confirm Payment</button>
                       </form>
-                    </div>
-                    <div id="online_amt" style="display:none;padding-left:50px;">
+                    </div> -->
+                    <div id="online_amt" >
                       <form action="<?php echo base_url('seminars/success'); ?>" method="post" onSubmit="return checkvalidation(this.form);">
                         <div class="" >
                           <span id="paymenterrormsg" style="color:red"></span>
@@ -76,9 +74,10 @@
                           <br>
                           <br>
                           <input type="radio" id="radio22" name="payment" onclick="payment_type(this.value);"  value="3"><span > Swipe on Delivery</span>
+                          <br> -->
                           <br>
-                          <br>-->
-                          <input type="radio" id="radio33" name="payment" onclick="payment_type(this.value);" value="1"><span> Online Payment</span>
+                          <input   type="radio" id="radio33" name="payment"  value="1"  checked hidden>
+                          <!-- <span> Online Payment</span> -->
                           <br>
                           <br>
                         </div>
@@ -111,7 +110,7 @@
     </div>
     <script src="<?php echo base_url('assets/js/jquery-1.12.4.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
-    <script>
+    <!-- <script>
     function payment_type(ids){
       $('#paymenterrormsg').html('');
       if(ids==1){
@@ -181,7 +180,7 @@
         return false;
       }
     }
-    </script>
+    </script> -->
   </body>
   </html>
   </body>

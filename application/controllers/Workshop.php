@@ -77,6 +77,7 @@ class Workshop extends CI_Controller
           "order_id"          => $razorpayOrderId,
           "display_currency"  => $orderData['currency'],
         ];
+        $data['user_data']=$post_data;
         $this->load->view('home/payments',$data);
       } else {
         $this->session->set_flashdata('error','Please try again');
