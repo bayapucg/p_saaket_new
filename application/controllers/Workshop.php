@@ -126,7 +126,7 @@ class Workshop extends CI_Controller
         //$this->session->set_flashdata('success',"Pa sent to your registered email address. Please Check your registered email address");
         $this->load->view('home/thankyou');
       }else{
-        echo 'notworking';
+        echo 'notworking';exit;
         $this->session->set_flashdata('error'," In Localhost mail  didn't sent");
         $this->load->view('home/thankyou');
       }
