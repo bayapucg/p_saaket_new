@@ -87,6 +87,11 @@
                                             <input name="zipcode" type="text" placeholder="Zipcode">
                                         </div> <!-- singel form -->
                                     </div>
+									<div class="col-md-12">
+                                        <div class="singel-form form-group">
+                                            <input readonly type="text" value="₹ 3500" disabled>
+                                        </div> <!-- singel form -->
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="singel-form">
                                             <button type="submit" class="main-btn">Proceed to payment</button>

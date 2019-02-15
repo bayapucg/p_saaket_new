@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>">
-  <body>
+  <body style="background:#f5f5f5">
     <style>
     .razorpay-payment-button{
       display:none;
@@ -15,17 +15,52 @@
       <div class="container" id="columns">
         <div class="row">
           <div class="modal-dialog">
-            <div class="modal-content box-shadow-site">
+            <div class="modal-content box-shadow-site" style="position:absolute;top:50px;width:500px;left:-200px;background:#fff">
               <div class="modal-body">
                 <div class="row">
                   <div class="container">
+				  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <th colspan="2">Confirm Details</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Bayapu</td>
+      </tr>
+	  <tr>
+        <td>Name</td>
+        <td>Bayapu</td>
+      </tr>
+	  <tr>
+        <td>Name</td>
+        <td>Bayapu</td>
+      </tr>
+	  <tr>
+        <td>Name</td>
+        <td>Bayapu</td>
+      </tr>
+	  <tr>
+        <td>Name</td>
+        <td>Bayapu</td>
+      </tr>
+	  <tr>
+        <td>Name</td>
+        <td>Bayapu</td>
+      </tr>
+      
+    </tbody>
+  </table>
                     <div id="online_amt_1" style="padding-left:50px;">
                       <form action="<?php echo base_url('seminars/success'); ?>" method="post" onSubmit="return checkvalidation_payment(this.form);">
-                        <input type="radio" id="radio1"  name="payment" onclick="payment_type(this.value);" value="2"><span > Cash On Delivery</span>
+                       <!-- <input type="radio" id="radio1"  name="payment" onclick="payment_type(this.value);" value="2"><span > Cash On Delivery</span>
                         <br>
                         <br>
                         <input type="radio" id="radio2" name="payment" onclick="payment_type(this.value);"  value="3"><span > Swipe on Delivery</span>
-                        <br>
+                        <br>-->
                         <br>
                         <input type="radio" id="radio3" name="payment" onclick="payment_type(this.value);" value="1"><span> Online Payment</span>
                         <br>
@@ -37,12 +72,12 @@
                       <form action="<?php echo base_url('seminars/success'); ?>" method="post" onSubmit="return checkvalidation(this.form);">
                         <div class="" >
                           <span id="paymenterrormsg" style="color:red"></span>
-                          <input type="radio" id="radio11"  name="payment" onclick="payment_type(this.value);" value="2"><span > Cash On Delivery</span>
+                         <!-- <input type="radio" id="radio11"  name="payment" onclick="payment_type(this.value);" value="2"><span > Cash On Delivery</span>
                           <br>
                           <br>
                           <input type="radio" id="radio22" name="payment" onclick="payment_type(this.value);"  value="3"><span > Swipe on Delivery</span>
                           <br>
-                          <br>
+                          <br>-->
                           <input type="radio" id="radio33" name="payment" onclick="payment_type(this.value);" value="1"><span> Online Payment</span>
                           <br>
                           <br>
