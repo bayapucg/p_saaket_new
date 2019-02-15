@@ -93,11 +93,6 @@
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-12">
-                                        <div class="singel-form form-group">
-                                            <input name="amount" type="text" placeholder="" value="3,500" readonly>
-                                        </div> <!-- singel form -->
-                                    </div>
-                                    <div class="col-md-12">
                                         <div class="singel-form">
                                             <button type="submit" class="main-btn">Proceed to payment</button>
                                         </div> <!-- singel form -->

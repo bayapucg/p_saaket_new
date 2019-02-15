@@ -65,7 +65,7 @@
                         <input type="radio" id="radio3" name="payment" onclick="payment_type(this.value);" value="1"><span> Online Payment</span>
                         <br>
                         <br>
-                        <button type="submit" class="btn btn-success" name="pay_submit">Pay</button>
+                        <button type="submit" class="btn btn-success" name="pay_submit">Confirm Payment</button>
                       </form>
                     </div>
                     <div id="online_amt" style="display:none;padding-left:50px;">
@@ -99,7 +99,7 @@
                         <?php if ($details['display_currency'] !== 'INR') { ?> data-display_currency="<?php echo $details['display_currency']?>" <?php } ?>
                         >
                         </script>
-                        <button type="submit" class="btn btn-success" name="pay_submit">Pay</button>
+                        <button type="submit" class="btn btn-success" name="pay_submit">Confirm Payment</button>
                       </form>
                     </div>
                   </div>
