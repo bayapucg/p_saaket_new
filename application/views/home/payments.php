@@ -77,6 +77,7 @@
                           <br> -->
                           <br>
                           <input   type="radio" id="radio33" name="payment"  value="1"  checked hidden>
+                        <input type='text'  value=<?php echo $user_data['email'];?> name='email' hidden >
                           <!-- <span> Online Payment</span> -->
                           <br>
                           <br>
