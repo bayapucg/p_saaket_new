@@ -94,7 +94,40 @@ class Seminars extends CI_Controller
     $razorpay_payment_id=$this->input->post('razorpay_payment_id');
     $razorpay_order_id=$this->input->post('razorpay_order_id');
     $razorpay_signature=$this->input->post('razorpay_signature');
-    $this->load->view('home/thankyou');
+    $payment_type=$this->input->post('payment');
+      $razorpay_payment_id=$this->input->post('razorpay_payment_id');
+      $razorpay_order_id=$this->input->post('razorpay_order_id');
+
+      $email=$this->input->post('email');
+
+    $config = array(
+                      'charset' => 'utf-8',
+                      'wordwrap' => TRUE,
+                      'mailtype' => 'html'
+                  );
+
+     $mesg=$this->load->view('home/message','',true);
+    $this->load->library('email');
+    $this->email->initialize($config);
+
+  $this->email->from('admin@psaaket.com', 'Psaaket');
+  $this->email->to($email);
+
+
+  $this->email->subject('Psaaket Payment');
+  $this->email->message($mesg);
+  if ($this->email->send())
+      {
+
+
+        $this->load->view('home/thankyou');
+      }
+      else{
+
+        $this->load->view('home/thankyou');
+      }
+
+
   }
 
 }

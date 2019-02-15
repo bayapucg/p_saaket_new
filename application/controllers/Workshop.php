@@ -89,48 +89,79 @@ class Workshop extends CI_Controller
     }
   }
   public  function success(){
-    $payment_type=$this->input->post('payment');
+  //   $payment_type=$this->input->post('payment');
+  //   $razorpay_payment_id=$this->input->post('razorpay_payment_id');
+  //   $razorpay_order_id=$this->input->post('razorpay_order_id');
+  //   $email=$this->input->post('email');
+  //   $razorpay_signature=$this->input->post('razorpay_signature');
+  //   $this->load->library('email');
+  //
+  // //  $email=$this->input->post('email');
+  // $email='kasimahesh34@gmail.com';
+  //   $razorpay_signature=$this->input->post('razorpay_signature');
+  //
+  // //  $email=$this->input->post('email');
+  //
+  //
+  //   $config = array(
+  //                   'charset' => 'utf-8',
+  //                   'wordwrap' => TRUE,
+  //                   'mailtype' => 'html'
+  //               );
+  //   $this->load->library('email');
+  //    $this->email->initialize($config);
+  //
+  //
+  //
+  //   $mesg=$this->load->view('home/message','',true);
+  //     $this->email->set_newline("\r\n");
+  //     $this->email->set_mailtype("html");
+  //     $this->email->to($email);
+  //     $this->email->from('admin@psaaket.com');
+  //     $this->email->subject('Payment Success');
+  //     $body = "Your payment is success";
+  //     $this->email->message($mesg);
+  //     if ($this->email->send())
+  //     {
+  //       //$this->session->set_flashdata('success',"Pa sent to your registered email address. Please Check your registered email address");
+  //       $this->load->view('home/thankyou');
+  //     }else{
+  //       echo 'notworking';exit;
+  //       $this->session->set_flashdata('error'," In Localhost mail  didn't sent");
+  //       $this->load->view('home/thankyou');
+  //     }
+  //   //$this->load->view('home/thankyou');
+  $payment_type=$this->input->post('payment');
     $razorpay_payment_id=$this->input->post('razorpay_payment_id');
     $razorpay_order_id=$this->input->post('razorpay_order_id');
+
     $email=$this->input->post('email');
-    $razorpay_signature=$this->input->post('razorpay_signature');
-    $this->load->library('email');
-
-  //  $email=$this->input->post('email');
-  $email='kasimahesh34@gmail.com';
-    $razorpay_signature=$this->input->post('razorpay_signature');
-
-  //  $email=$this->input->post('email');
-
-
-    $config = array(
+  $config = array(
                     'charset' => 'utf-8',
                     'wordwrap' => TRUE,
                     'mailtype' => 'html'
                 );
-    $this->load->library('email');
-     $this->email->initialize($config);
+
+   $mesg=$this->load->view('home/message','',true);
+  $this->load->library('email');
+  $this->email->initialize($config);
+
+$this->email->from('admin@psaaket.com', 'Psaaket');
+$this->email->to($email);
 
 
+$this->email->subject('Psaaket Payment');
+$this->email->message($mesg);
+if ($this->email->send())
+    {
 
-    $mesg=$this->load->view('home/message','',true);
-      $this->email->set_newline("\r\n");
-      $this->email->set_mailtype("html");
-      $this->email->to($email);
-      $this->email->from('admin@psaaket.com');
-      $this->email->subject('Payment Success');
-      $body = "Your payment is success";
-      $this->email->message($mesg);
-      if ($this->email->send())
-      {
-        //$this->session->set_flashdata('success',"Pa sent to your registered email address. Please Check your registered email address");
-        $this->load->view('home/thankyou');
-      }else{
-        echo 'notworking';exit;
-        $this->session->set_flashdata('error'," In Localhost mail  didn't sent");
-        $this->load->view('home/thankyou');
-      }
-    //$this->load->view('home/thankyou');
+      $this->load->view('home/thankyou');
+    }
+    else{
+      $this->load->view('home/thankyou');
+    }
+
+
   }
 
 }

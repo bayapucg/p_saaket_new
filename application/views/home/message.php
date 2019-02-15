@@ -1,5 +1,4 @@
-<html>
-<body>
+
    <table width="100%"  style="max-width:650px;margin:0 auto" cellspacing="0" cellpadding="0" height="60">
    <tbody>
     <tr style="background:#25346c">
@@ -80,5 +79,4 @@
     </tr>
    </tbody>
   </table>
-  </body>
-  </html>
+  
