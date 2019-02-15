@@ -92,9 +92,16 @@ class Workshop extends CI_Controller
     $payment_type=$this->input->post('payment');
     $razorpay_payment_id=$this->input->post('razorpay_payment_id');
     $razorpay_order_id=$this->input->post('razorpay_order_id');
-    $email=$this->input->post('email');
+  //  $email=$this->input->post('email');
+  $email='kasimahesh34@gmail.com';
     $razorpay_signature=$this->input->post('razorpay_signature');
+    $config = array(
+                    'charset' => 'utf-8',
+                    'wordwrap' => TRUE,
+                    'mailtype' => 'html'
+                );
     $this->load->library('email');
+     $this->email->initialize($config);
 
 
     $mesg=$this->load->view('home/message','',true);

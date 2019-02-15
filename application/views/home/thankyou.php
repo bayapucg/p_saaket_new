@@ -4,7 +4,7 @@
     <meta charset="utf-8">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>">
   </head>
- 
+
   <body style="height:100%">
   <div class="container" >
   <div class="row" >
@@ -24,6 +24,6 @@
 </div>
 </div>
 </div>
-    
+
   </body>
 </html>
